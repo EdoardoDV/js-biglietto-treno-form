@@ -1,0 +1,185 @@
+/* RESET */
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* FINE RESET */
+/* Dati Generici */
+body {
+  font-family: 'Lato', sans-serif;
+  background: darkred;
+}
+.title {
+  text-align: center;
+}
+h1 {
+  color: white;
+}
+h2 {
+  font-size: 20px;
+}
+p {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 15px;
+}
+/* Fine Dati Generici */
+/* Dati Cliente */
+#customer_data {
+  background: linear-gradient(135deg, darkred, red);
+  border-right: 3px solid white;
+  float: left;
+  width: 40%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#customer_data select,
+#customer_data input {
+  margin-bottom: 15px;
+  margin-left: 5%;
+  padding: 3px 8px;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 90%;
+}
+.question {
+  background: grey;
+  border: 2px solid white;
+  margin: 5vh 5% 0;
+}
+.question label {
+  display: block;
+  margin: 15px 0 15px 5%;
+}
+/* Fine Dati Cliente */
+/* Tasti Conferma/Annulla */
+.confirm {
+  position: relative;
+}
+.confirm button {
+  background: rgba(155,155,155,0.7);
+  color: white;
+  font-weight: 800;
+  border-style: none;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+#confirm {
+  position:fixed;
+  height: 50px;
+  width: 100px;
+  bottom: 20px;
+  left: 20px;
+}
+#cancel {
+  position:fixed;
+  height: 50px;
+  width: 100px;
+  bottom: 20px;
+  left: 130px;
+}
+/* Fine Tasti Conferma/Annulla */
+/* Sezione Biglietto */
+#ticket {
+  background: darkred;
+  width: 60%;
+  min-height: 100vh;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  display: none;
+}
+[class^="ticket_"] {
+  background: white;
+  margin: 0 10%;
+  height: 100px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.tag, .result {
+  margin: 15px;
+}
+/* Fine Sezione Biglietto */
+/* Media Query */
+@media screen and (min-width: 781px) {
+  /* Sezione Dati Utente */
+  .title {
+    text-align: left;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    position: absolute;
+  }
+  #customer_data {
+    position: relative;
+    height: 40vh;
+    min-height: 200px;
+    border-right: 0;
+    border-bottom: 2px solid white;
+    width: 100vw;
+    flex-direction: row;
+  }
+  .question {
+    height: 40%;
+    min-height: 100px;
+    width: 100vw;
+    margin: 50px 2% 100px 5%;
+  }
+  .confirm {
+    position: absolute;
+    margin: 30vh calc(50% - 102px);
+  }
+  /* Fine Sezione Dati Utente */
+  /* Tasti */
+  #confirm {
+    position: relative;
+    height: 30px;
+    width: 100px;
+    bottom: 0;
+    left: 0;
+  }
+  #cancel {
+    position:relative;
+    height: 30px;
+    width: 100px;
+    bottom: 0;
+    left: 0;
+  }
+  /* Fine Tasti */
+  /* Sezione Biglietto */
+  #ticket {
+    width: 100vw;
+    height: 60vh;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    display: none;
+  }
+  #ticket .title {
+    display: block;
+    position: absolute;
+    left: 0;
+    text-align: left;
+  }
+  [class^="ticket_"] {
+    background: white;
+    margin: 150px 0;
+    height: 100px;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+  }
+  .ticket_name {
+    background: lightgrey;
+  }
+  .tag, .result {
+    margin: 15px;
+  }
+  /* Fine Sezione Biglietto */
+}
+/* Fine Media Query */
